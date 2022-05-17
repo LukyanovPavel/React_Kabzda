@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import {Accordion} from "./components/Accordion/Accordion";
+import {Rating} from "./Rating";
+import {PageTitle} from "./PageTitle";
+import {OnOff} from "./components/OnOff/OnOff";
+import {UnControlledAccordion} from "./components/UnControlledAccordion/UnControlledAccordion";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <div className="App">
+            <PageTitle title={'This is APP component'}/>
+            <PageTitle title={'My friends'}/>
+            Article 1
+            <UnControlledAccordion titleValue={'menu'}/>
+            <UnControlledAccordion titleValue={'Users'}/>
+            <Rating/>
+            <Rating/>
+            <Rating/>
+            <OnOff/>
+            <OnOff/>
+
+        </div>
+    );
 }
 
 export default App;
